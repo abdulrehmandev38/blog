@@ -1,0 +1,15 @@
+<% if notice %>
+<div class="w-full mb-4 px-4 py-2 rounded-md bg-green-300">
+<p class="text-white font-bold"><%= notice %></p>
+</div>
+<% end %>
+<p class="font-bold text-4xl">
+<%= @post.title %>
+</p>
+<p class="mt-4 mb-6">
+<%= @post.content %>
+</p>
+<div class="flex gap-6">
+  <%= link_to "Edit", edit_post_path(@post), class: "rounded-md px-4 py-2 text-white font-bold bg-blue-400 hover:bg-blue-600" %>
+  <%= button_to "Delete", @post, method: :delete, class: "rounded-md px-4 py-2 text-white font-bold bg-red-400 hover:bg-red-600" %>
+</div>
